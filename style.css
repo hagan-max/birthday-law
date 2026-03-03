@@ -1,0 +1,90 @@
+body {
+    background-color: #000 !important;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    padding: 50px 20px;
+}
+
+.hidden { display: none; opacity: 0; }
+
+.visible {
+    display: block !important;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.gold { color: gold; text-shadow: 0 0 10px gold; }
+.red { color: red; }
+
+#countdown { font-size: 80px; color: red; margin: 20px; }
+
+/* The Vision Board size */
+.vision-img {
+    max-width: 400px; /* Adjust this to make the vision board smaller/larger */
+    border: 3px solid #333;
+    border-radius: 10px;
+}
+
+/* Photo Grid for the 5 photos */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Individual photo sizing */
+.evidence-img {
+    width: 100%;
+    height: 180px; /* This keeps them small and uniform */
+    object-fit: cover;
+    border: 2px solid #444;
+    border-radius: 5px;
+}
+
+.testimony-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.testimony-box {
+    background: #111;
+    border-left: 4px solid gold;
+    padding: 10px 20px;
+    width: 80%;
+    max-width: 500px;
+    text-align: left;
+}
+
+#verdict {
+    display: none; /* Default state */
+    opacity: 0;
+    color: gold;
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+#verdict.visible {
+    display: block !important; /* Forces it to take up space */
+    opacity: 1 !important;    /* Forces it to be seen */
+    animation: slamIn 0.5s ease-out;
+}
+
+@keyframes slamIn {
+    0% { transform: scale(5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+#cursor { animation: blink 1s infinite; }
+@keyframes blink { 50% { opacity: 0; } }
