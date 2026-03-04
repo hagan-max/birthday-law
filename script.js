@@ -25,6 +25,7 @@ async function runTrial() {
     stages.type.classList.add("visible");
     await typeAndErase("Initiating Court Proceedings...");
     await typeAndErase("The defendant is charged with: EXTREME GREATNESS.");
+    await typeAndErase("HAPPY 29TH BIRTHDAY KWAKU AMPONSAH ASIAMA");
 
     // --- STAGE 3: THE VISION ---
     await typeText("Exhibit A: The Vision Board...");
@@ -95,3 +96,4 @@ function eraseText() {
     });
 
 }
+
