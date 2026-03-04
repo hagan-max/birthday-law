@@ -43,7 +43,7 @@ async function runTrial() {
     // --- STAGE 5: EVIDENCE ---
     await typeText("The evidence is overwhelming. Behold.");
     stages.evidence.classList.add("visible");
-    await wait(8000); // 8 seconds to see all 4 photos
+    await wait(5000); // 8 seconds to see all 4 photos
     
     // --- STAGE 6: VERDICT ---
     stages.type.classList.add("hidden");
@@ -93,4 +93,5 @@ function eraseText() {
         }
         erase();
     });
+
 }
